@@ -13,17 +13,18 @@ fun main(args: Array<String>) {
 //    val complex2 = Complex(4.0, 5.0)
 //    println(maxOf(complex1, complex2))
 
-    //-----3-------
-    //Function22
-//    (1..3).map { }
 
-    //------4-------------
-//    //Array<String>
-//    //kotlin编译器智能，自动推断类型
+    //------3-------------
+    //Array<String>
+    //kotlin编译器智能，自动推断类型
 //    val complex1 = Complex<Double>(3.0, 4.0)
 //    val complex2 = Complex(4, 5)
 //    println(complex1)
 //    println(complex2)
+
+    //-----4-------
+    //Function22
+//    (1..3).map { }
 
 }
 

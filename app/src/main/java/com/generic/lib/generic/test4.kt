@@ -14,7 +14,6 @@ fun main(args: Array<String>) {
     //读取一个json文件，并转化为person对象
     val person1: Person = Gson().fromJson(File("person.json").readText())
     val person2 = Gson().fromJson<Person>(File("person.json").readText())
-
 }
 
 
