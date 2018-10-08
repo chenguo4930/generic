@@ -2,6 +2,7 @@ package com.generic.lib.generic
 
 fun main(args: Array<String>) {
 //    getAList(null)
+
 }
 
 /**

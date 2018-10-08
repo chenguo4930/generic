@@ -1,12 +1,19 @@
 package com.generic.lib.generic
 
+import java.lang.Appendable
+
 fun main(args: Array<String>) {
 
     //------1-----
     val a = 4
-    val b = 3
+    val b: Int = 3
     val c = maxOf(a, b)
     println(c)
+
+    //------1.1-----
+    val helloWorld = StringBuffer("Hello World")
+    ensureTrailingPeriod(helloWorld)
+    println(helloWorld)
 
     //-----2------
 //    val complex1 = Complex(3.0, 4.0)
@@ -34,6 +41,17 @@ fun main(args: Array<String>) {
  */
 fun <T : Comparable<T>> maxOf(a: T, b: T): T {
     return if (a < b) b else a
+}
+
+/**
+ * 1.1 为一个类型参数制定多个约束条件
+ */
+fun <T> ensureTrailingPeriod(seq: T) where T : CharSequence, T : Appendable {
+    //调用为CharSequence接口定义的扩展函数
+    if (!seq.endsWith(".")) {
+        //调用Appendable接口方法
+        seq.append("......")
+    }
 }
 
 /**
