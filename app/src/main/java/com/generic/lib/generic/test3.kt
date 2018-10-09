@@ -26,5 +26,9 @@ fun <T> testGenerics() {
 //fun <T> isA(value : Any) = value is T
 inline fun <reified T> isA(value: Any) = value is T
 
+inline fun <reified R> List<Any>.filterAndForEach(eachEveryData: (R) -> Unit) {
+    this.filter { it is R }.map { it as R }.forEach { eachEveryData(it) }
+}
+
 
 

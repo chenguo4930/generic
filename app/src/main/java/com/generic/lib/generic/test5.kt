@@ -18,11 +18,15 @@ package com.generic.lib.generic
  */
 
 fun main(args: Array<String>) {
-//    val a: Int? = 10000
-//    val b: Int = 10000
+
+//    JVM把[-128,127]的所有int数字全部缓存了，任何指向这个范围的对象，都不可能被另外"创建"，又何谈“装箱”
+//    val a: Int? = 10
+//    val b: Int = 10
+//    val a: Int? = 1000
+//    val b: Int = 1000
 //
-//    println("a= =b ${a == b}")
-//    println("a= = = ${a === b}")
+//    println("a == b ${a == b}")
+//    println("a === b ${a === b}")
 
 
 }
@@ -50,7 +54,7 @@ open class Animal {
 //class Herd<T : Animal> {
 class Herd<out T : Animal> {
     val size: Int get() = 5
-    operator fun get(i: Int): T {
+    tailrec operator fun get(i: Int): T {
         return get(0)
     }
 }
