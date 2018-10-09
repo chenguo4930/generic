@@ -1,5 +1,6 @@
 package com.generic.lib.generic
 
+import java.math.BigDecimal
 import kotlin.collections.List
 
 /**
@@ -16,6 +17,7 @@ fun main(args: Array<String>) {
     strings.sortedWith(anyComparator)
 
 //    //协变 ：Number是Int的父类，List<Number>是List<Int>的超类型
+//    //里氏替换原则：子类的对象可以替换父类的对象，子类兼容性更好
 //    val numberList: List<Number> = listOf(1, 2, 3)
 //
 //    //逆变 ：Comparator<Int>是Comparator<Number>的超类型
@@ -29,6 +31,8 @@ fun main(args: Array<String>) {
 //    val numberArrayList:MutableList<Int> = mutableListOf<Int>(1,2,3,4)
 //    val numberArrayList:MutableList<Int> = mutableListOf<Number>(1,2,3,4)
 //    val numberArrayList: MutableList<Number> = mutableListOf<Int>(1, 2, 3, 4)
+//    val numberList: MutableList<Number> = mutableListOf<Int>(1, 3, 4)
+//    numberList.add(BigDecimal("123"))
 
 }
 
