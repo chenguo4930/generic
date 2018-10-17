@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 }
 
 fun <T> testGenerics() {
-//    val t: T? = null //  LOCALVARIABLE t Ljava/lang/Object; L1 L2 0
+    val t: T? = null //  LOCALVARIABLE t Ljava/lang/Object; L1 L2 0
 //    println(T::class.simpleName)
 }
 
@@ -25,6 +25,7 @@ fun <T> testGenerics() {
 
 //fun <T> isA(value : Any) = value is T
 inline fun <reified T> isA(value: Any) = value is T
+
 
 inline fun <reified R> List<Any>.filterAndForEach(eachEveryData: (R) -> Unit) {
     this.filter { it is R }.map { it as R }.forEach { eachEveryData(it) }

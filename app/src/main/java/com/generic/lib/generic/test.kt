@@ -9,11 +9,10 @@ fun main(args: Array<String>) {
     val b: Int = 3
     val c = maxOf(a, b)
     println(c)
-
     //------1.1-----
-    val helloWorld = StringBuffer("Hello World")
-    ensureTrailingPeriod(helloWorld)
-    println(helloWorld)
+//    val helloWorld = StringBuffer("Hello World")
+//    ensureTrailingPeriod(helloWorld)
+//    println(helloWorld)
 
     //-----2------
 //    val complex1 = Complex(3.0, 4.0)
@@ -46,13 +45,13 @@ fun <T : Comparable<T>> maxOf(a: T, b: T): T {
 /**
  * 1.1 为一个类型参数制定多个约束条件
  */
-fun <T> ensureTrailingPeriod(seq: T) where T : CharSequence, T : Appendable {
-    //调用为CharSequence接口定义的扩展函数
-    if (!seq.endsWith(".")) {
-        //调用Appendable接口方法
-        seq.append("......")
-    }
-}
+//fun <T> ensureTrailingPeriod(seq: T) where T : CharSequence, T : Appendable {
+//    //调用为CharSequence接口定义的扩展函数
+//    if (!seq.endsWith(".")) {
+//        //调用Appendable接口方法
+//        seq.append("......")
+//    }
+//}
 
 /**
  * 2、实现比较接口的类
